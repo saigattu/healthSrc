@@ -1,0 +1,66 @@
+
+@media (min-width: 1220px) and (max-width: 3000px){
+.logo{
+  width: 250px; margin-top: -16px;height: 70px;
+}
+}
+@media (max-width: 480px) {
+  .logo{
+  width: 160px; margin-top: -16px;height: 70px;
+}
+}
+
+@media (min-width: 992px) and (max-width: 1219px) {
+.logo{
+  width: 250px; margin-top: -16px;height: 70px;
+}
+}
+@media (min-width: 950px) and (max-width: 991px) {
+.logo{
+  width: 250px; margin-top: -16px;height: 70px;
+}
+}
+
+@media (min-width: 1199px) {
+.logo{
+  width: 250px; margin-top: -16px;height: 70px;
+}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+.logo{
+  width: 150px; margin-top: -16px;height: 70px;
+}
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (max-width: 991px) {
+.logo{
+  width: 250px; margin-top: -16px;height: 70px;
+}
+}
+
+@media (max-width: 1024px) {
+.logo{
+  width: 150px; margin-top: -16px;height: 70px;
+}
+}
+
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+.logo{
+  width: 160px; margin-top: -16px;height: 70px;
+}
+
+}
+@media (min-width: 627px) and (max-width: 767px) {
+  .logo{
+  width: 150px; margin-top: -16px;height: 70px;
+}
+}
+
+@media (min-width: 481px) and (max-width: 626px) {
+  .logo{
+  width: 160px; margin-top: -16px;height: 70px;
+}
+}

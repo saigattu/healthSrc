@@ -1,0 +1,309 @@
+#about{
+     background: white;
+}
+#aboutInfo{
+    padding-top: 100px !important;
+}
+
+.aboutClsHeader{
+  background: #CE5A57;
+      
+}
+.aboutClsHeader h2{
+    margin-top: 10px !important;
+}
+.aboutCls{
+   background-image: url('../../img/screen1.jpg');
+     padding-top: 10px;
+}
+.aboutDescr p{
+    /*padding-top: 10px !important;*/
+    color: white;
+    font-size: 18px;
+}
+.home-section {
+    padding-top: 70px;
+    
+	/*display:block;
+    position:relative;
+    z-index:120;
+	background-color: #fff;*/
+}
+.home-section h4{
+    color: white !important;
+}
+
+
+.home-section.nopadding {
+    padding-top: 0;
+    padding-bottom: 0;
+	display:block;
+    position:relative;
+    z-index:120;
+}
+.home-section.nopadding-bot {
+    padding-bottom: 0;
+}
+.home-section.nopadding-top {
+    padding-top: 0;
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeInUpBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+    transform: translateY(2000px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUpBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+    -ms-transform: translateY(2000px);
+    transform: translateY(2000px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.fadeInUpBig {
+  -webkit-animation-name: fadeInUpBig;
+  animation-name: fadeInUpBig;
+}
+
+.paddingtop-80 {
+    padding-top: 80px !important;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+article, aside, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+Inherited from body#page-top
+
+
+Pseudo ::before element
+
+:before, :after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+Pseudo ::after element
+
+:before, :after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.box i {
+    margin-bottom: 10px;
+}
+
+.bg-skin {
+    background: rgba(13, 70, 83,0.78);
+}
+
+.circled {
+    background: rgba(13, 70, 83,0.78);
+}
+
+.circled {
+    border-radius: 50%;
+    display: inline-block;
+    color: #fff;
+    width: 1.6em;
+    height: 1.6em;
+    text-align: center;
+    line-height: 1.6em;
+}
+
+.fa-3x {
+    font-size: 3em;
+}
+
+
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+@media(min-width: 627px) and (max-width: 480px) {
+  .parallax_txt8{
+    font-size: 10px;  color: #fff; font-family: 'Asap'; line-height: 40px;padding-right: 50px;z-index: 10;text-align: center;
+   
+    }
+
+.parallax_txt9{font-size: 26px;  color: #fff; font-family: 'Asap'; text-transform: uppercase;text-align: center;
+
+}
+}
+
+.parallax_txt8{
+    font-size: 20px;  color: #fff; font-family: 'Asap'; line-height: 40px;padding-right: 50px;z-index: 10;text-align: center;
+   
+    }
+
+.parallax_txt9{font-size: 46px;  color: #fff; font-family: 'Asap'; text-transform: uppercase;text-align: center;
+padding-top: 50px;
+}
+
+p,h2{
+    color: black;
+    font-family: 'Asap';
+}
+
+
+
+/* ============================= parallax ====================== */
+.parallax {width: 100%; position: relative; overflow: hidden; background: #000; color: #ffffff;}
+.parallax, .parallax .parallax-content, .parallax .overlay { height: 100%;}
+
+.parallax-bg { width: 100%; height: 100%; left: 0; top: 0; margin: 0 auto; position: absolute; background-size: cover; background-attachment: scroll; background-repeat: repeat-y; background-position: center center; }
+.parallax-bg.bg-fixed{background-attachment: fixed;}
+.parallax .overlay { background: none; width: 100%; position: absolute; overflow: hidden; background: none; background-color: rgba(0,0,0,0.5);}
+
+.parallax-content {position: absolute; padding-top: 0px; padding-bottom: 0px; text-align: center;}
+
+
+
+
+.bg2 { background-image: url(../../img/parallax6.jpg); }
+
+
+
+
+
+#parallax2{position: relative; overflow: visible; height: 350px;}
+
+
+#parallax2 .parallax-content{padding: 120px 0;}
+
+.image {
+  
+  /*background: url('../../img/checkup.png') ;*/
+  
+  background-size: contain;
+  background-color: rgba(0,0,0,0.7);
+  -webkit-transition: 0.5s;
+          transition: 0.5s;
+
+
+
+}
+
+.image:hover{
+  
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+
+.h4 {
+    font-size: 24px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    font-weight: 700;
+    text-align: center;
+    color: orange;
+    
+}
+
+
+.mbr-overlay {
+  background-color: #000;
+  bottom: 0;
+  left: 0;
+  opacity: 0.5;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1; }
+  .mbr-overlay ~ * {
+    z-index: 2; }
+
+.overlay { background: none; width: 100%; position: absolute; overflow: hidden; background: none; background-color: rgba(0,0,0,0.5);}
+
+.imgIcon{
+    padding-left:120px;
+    height: 135px;
+    padding-top: 10px;
+}
+.p{
+    color: white;font-size: 18px;padding-left: 5px;
+}
+
+/*.row {
+    display: table;
+}
+
+[class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+}*/
+
+.iconDesc{
+     font-family: 'Asap';
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}

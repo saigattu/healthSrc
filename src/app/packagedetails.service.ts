@@ -1,0 +1,78 @@
+import { Injectable } from '@angular/core';
+import {Healthpackage} from './healthpackage';
+import { Centre } from './centre';
+import { Branch } from './branch';
+import { PackageDescription } from './package-description';
+@Injectable()
+export class PackagedetailsService {
+
+  constructor() { }
+public packageDetails: Healthpackage;
+public cartPackageList:Array<Healthpackage>=[];
+public totalPackageList:Array<Healthpackage>=[];
+public cartCount: number =0;
+
+public pcDet1:Array<PackageDescription> =[{pcName:"COMPLETE BLOOD PICTURE(9)",pcValue:"WBC COUNT, RBC COUNT, DIFFERNTIAL COUNT, PACKED CELL VOUME, HEAMOGOBLIN %, MCV, MCH, MCHC,PLATLET COUNT"},{pcName:"COMPLETE URINE EXAMINATION- (16)",pcValue:"COLOUR, CLARITY, PH, SPECIFIC GRAVITY, CRYSTALS,BACTERIA, YEAST, CAST, KETONE BODIES, NITRATES,BILIRUBIN, URO BILIRUBIN, BLOOD, PROTEIN, RBC, WBC"},{pcName:"Other",pcValue:"RANDOM BLOOD SUGAR,BILIRUBIN,S.CREATININE,S.CALCIUM,TSH,CHEST X RAY"}];
+public p=new Healthpackage(1,'BASIC HEALTH CHECKUP(31)',this.pcDet1,100);
+
+public pcDet2:Array<PackageDescription> =[{pcName:"COMPLETE BLOOD PICTURE(9)",pcValue:"WBC COUNT, RBC COUNT, DIFFERNTIAL COUNT, PACKED CELL VOUME, HEAMOGOBLIN %, MCV, MCH, MCHC,PLATLET COUNT"},{pcName:"COMPLETE URINE EXAMINATION- (16)",pcValue:"COLOUR, CLARITY, PH, SPECIFIC GRAVITY, CRYSTALS,BACTERIA, YEAST, CAST, KETONE BODIES, NITRATES,BILIRUBIN, URO BILIRUBIN, BLOOD, PROTEIN, RBC, WBC"},{pcName:"LIVER FUNCTION TEST (8)",pcValue:"bilirubin, ALT, AST, Alkaline phosphate, albumin,prothrombin time, HbsAg, HCV"},{pcName:"LIPID PROFILE (5)",pcValue:"Total cholesterol, triglycerides, HDL, LDL, Cholesterol:HDL ratio"},{pcName:"Other",pcValue:"ERYTHROCYTE SEDIMENTATION RATE,FASTING BLOOD SUGAR/POST PRANDIAL BLOOD SUGAR,S.CREATININE,S.CALCIUM,BLOOD UREA,THYROID FUNCTION TEST(3),S.URIC ACID,ULTRA SOUND ABDOMEN/PELVIS,ECG,CHEST X RAY"}];
+
+public p2=new Healthpackage(2,'MASTER HEALTH CHECKUP(50)',this.pcDet2,200);
+
+public pcDet3:Array<PackageDescription> =[{pcName:"COMPLETE BLOOD PICTURE(9)",pcValue:"WBC COUNT, RBC COUNT, DIFFERNTIAL COUNT, PACKED CELL VOUME, HEAMOGOBLIN %, MCV, MCH, MCHC,PLATLET COUNT"},{pcName:"LIPID PROFILE (5)",pcValue:"Total cholesterol, triglycerides, HDL, LDL, Cholesterol:HDL ratio"},{pcName:"Other",pcValue:"RANDOM BLOOD SUGAR,ECG,CHEST X RAY,2D ECHOCARDIOGRAPHY(2D ECHO),S.CREATININE,BLOOD UREA"}];
+
+public p3=new Healthpackage(3,'BASIC HEART HEALTHCHECKUP(20)',this.pcDet3,300);
+
+public pcDet4:Array<PackageDescription> =[{pcName:"COMPLETE BLOOD PICTURE(9)",pcValue:"WBC COUNT, RBC COUNT, DIFFERNTIAL COUNT, PACKED CELL VOUME, HEAMOGOBLIN %, MCV, MCH, MCHC,PLATLET COUNT"},{pcName:"LIPID PROFILE (5)",pcValue:"Total cholesterol, triglycerides, HDL, LDL, Cholesterol:HDL ratio"},{pcName:"Other",pcValue:"RANDOM BLOOD SUGAR,ECG,CHEST X RAY,2D ECHOCARDIOGRAPHY(2D ECHO),S.CREATININE,B.UREA,STRESS TEST OR TREADMILL TEST(TMT),CT CORONARY ANGIOGRAM"}];
+
+public p4=new Healthpackage(4,'COMPLETE HEART HEALTH CHECKUP (22)+DIET COUNSELLING',this.pcDet4,400);
+
+public pcDet5:Array<PackageDescription> =[{pcName:"COMPLETE BLOOD PICTURE(9)",pcValue:"WBC COUNT, RBC COUNT, DIFFERNTIAL COUNT, PACKED CELL VOUME, HEAMOGOBLIN %, MCV, MCH, MCHC,PLATLET COUNT"},{pcName:"LIPID PROFILE (5)",pcValue:"Total cholesterol, triglycerides, HDL, LDL, Cholesterol:HDL ratio"},{pcName:"Other",pcValue:"FASTING BLOOD SUGAR/POST PRANDIAL BLOOD SUGAR,HBA1C"}];
+
+public p5=new Healthpackage(5,'DIABETIC HEALTH CHECKUP(16)+DIETICIAN+OPHTHALMOLOGIST+DENTAL CONSULTATION',this.pcDet5,400);
+
+public pcDet6:Array<PackageDescription> =[{pcName:"COMPLETE BLOOD PICTURE(9)",pcValue:"WBC COUNT, RBC COUNT, DIFFERNTIAL COUNT, PACKED CELL VOUME, HEAMOGOBLIN %, MCV, MCH, MCHC,PLATLET COUNT"},{pcName:"COMPLETE URINE EXAMINATION- (16)",pcValue:"COLOUR, CLARITY, PH, SPECIFIC GRAVITY, CRYSTALS,BACTERIA, YEAST, CAST, KETONE BODIES, NITRATES,BILIRUBIN, URO BILIRUBIN, BLOOD, PROTEIN, RBC, WBC"},{pcName:"Other",pcValue:"FASTING BLOOD SUGAR/POST PRANDIAL BLOOD SUGAR,ECG,CHEST X RAY,S.CREATININE"}];
+
+public p6=new Healthpackage(6,'PRE DIABETIC HEALTH CHECKUP(29)',this.pcDet6,400);
+
+public pcDet7:Array<PackageDescription> =[{pcName:"COMPLETE BLOOD PICTURE(9)",pcValue:"WBC COUNT, RBC COUNT, DIFFERNTIAL COUNT, PACKED CELL VOUME, HEAMOGOBLIN %, MCV, MCH, MCHC,PLATLET COUNT"},{pcName:"COMPLETE URINE EXAMINATION- (16)",pcValue:"COLOUR, CLARITY, PH, SPECIFIC GRAVITY, CRYSTALS,BACTERIA, YEAST, CAST, KETONE BODIES, NITRATES,BILIRUBIN, URO BILIRUBIN, BLOOD, PROTEIN, RBC, WBC"},{pcName:"LIVER FUNCTION TEST (8)",pcValue:"bilirubin, ALT, AST, Alkaline phosphate, albumin,prothrombin time, HbsAg, HCV"},{pcName:"S.ELECTROLYTES (3)",pcValue:"S.SODIUM, S.POTTASIUM, S.CHLORIDE"},{pcName:"Other",pcValue:"ERYTHROCYTE SEDIMENTATION RATE,FASTING BLOOD SUGAR, POST PRANDIAL BLOOD SUGAR,B.UREA,S.CALCIUM,TSH,VITAMIN A, D3,DEXA SCAN,ECG,CHEST X RAY,S.CREATININE,ULTRA SOUND ABDOMEN/PELVIS,PSA FOR MALES,PAP SMEAR FOR FEMALES"}];
+
+public p7=new Healthpackage(4,'PRE DIABETIC HEALTH CHECKUP(29)',this.pcDet7,400);
+
+public pcDet8:Array<PackageDescription> =[{pcName:"COMPLETE BLOOD PICTURE(9)",pcValue:"WBC COUNT, RBC COUNT, DIFFERNTIAL COUNT, PACKED CELL VOUME, HEAMOGOBLIN %, MCV, MCH, MCHC,PLATLET COUNT"},{pcName:"COMPLETE URINE EXAMINATION- (16)",pcValue:"COLOUR, CLARITY, PH, SPECIFIC GRAVITY, CRYSTALS,BACTERIA, YEAST, CAST, KETONE BODIES, NITRATES,BILIRUBIN, URO BILIRUBIN, BLOOD, PROTEIN, RBC, WBC"},{pcName:"THYROID FUNCTION TEST(3)",pcValue:"(TSH, T4, T3)"},{pcName:"S.ELECTROLYTES (3)",pcValue:"S.SODIUM, S.POTTASIUM, S.CHLORIDE"},{pcName:"Other",pcValue:"FASTING BLOOD SUGAR, POST PRANDIAL BLOOD SUGAR,S.CREATININE"}];
+
+public p8=new Healthpackage(8,'THYROID SCREENING TEST(30)',this.pcDet8,400);
+
+public pcDet9:Array<PackageDescription> =[{pcName:"COMPLETE BLOOD PICTURE(9)",pcValue:"WBC COUNT, RBC COUNT, DIFFERNTIAL COUNT, PACKED CELL VOUME, HEAMOGOBLIN %, MCV, MCH, MCHC,PLATLET COUNT"},{pcName:"COMPLETE URINE EXAMINATION- (16)",pcValue:"COLOUR, CLARITY, PH, SPECIFIC GRAVITY, CRYSTALS,BACTERIA, YEAST, CAST, KETONE BODIES, NITRATES,BILIRUBIN, URO BILIRUBIN, BLOOD, PROTEIN, RBC, WBC"},{pcName:"Other",pcValue:"RANDOM BLOOD SUGAR,S.CREATININE,TRANSFERRIN,TRANSFERRIN SATURATION,TOTAL IRON BINDING CAPACITY"}];
+
+public p9=new Healthpackage(9,'ANEMIA SCREENING TEST(30)',this.pcDet9,400);
+
+
+public pcDet10:Array<PackageDescription> =[{pcName:"COMPLETE BLOOD PICTURE(9)",pcValue:"WBC COUNT, RBC COUNT, DIFFERNTIAL COUNT, PACKED CELL VOUME, HEAMOGOBLIN %, MCV, MCH, MCHC,PLATLET COUNT"},{pcName:"COMPLETE URINE EXAMINATION- (16)",pcValue:"COLOUR, CLARITY, PH, SPECIFIC GRAVITY, CRYSTALS,BACTERIA, YEAST, CAST, KETONE BODIES, NITRATES,BILIRUBIN, URO BILIRUBIN, BLOOD, PROTEIN, RBC, WBC"},{pcName:"LIVER FUNCTION TEST (8)",pcValue:"bilirubin, ALT, AST, Alkaline phosphate, albumin,prothrombin time, HbsAg, HCV"},{pcName:"Other",pcValue:"RANDOM BLOOD SUGAR,S.CREATININE,AMYLASE,LIPASE,U/S ABDOMEN"}];
+
+public p10=new Healthpackage(10,'PANCREATIC SCREENING TEST(38)',this.pcDet10,400);
+
+
+public pcDet11:Array<PackageDescription> =[{pcName:"COMPLETE BLOOD PICTURE(9)",pcValue:"WBC COUNT, RBC COUNT, DIFFERNTIAL COUNT, PACKED CELL VOUME, HEAMOGOBLIN %, MCV, MCH, MCHC,PLATLET COUNT"},{pcName:"COMPLETE URINE EXAMINATION- (16)",pcValue:"COLOUR, CLARITY, PH, SPECIFIC GRAVITY, CRYSTALS,BACTERIA, YEAST, CAST, KETONE BODIES, NITRATES,BILIRUBIN, URO BILIRUBIN, BLOOD, PROTEIN, RBC, WBC"},{pcName:"LIVER FUNCTION TEST (8)",pcValue:"bilirubin, ALT, AST, Alkaline phosphate, albumin,prothrombin time, HbsAg, HCV"},{pcName:"Other",pcValue:"ERYTHROCYTE SEDIMENTATION RATE,S.CREATININE,ULTRA SOUND ABDOMEN,ANTI NUCLEAR ANTIBODY,ANTI-SMOOTH MUSCLE ANTIBODY,S.COPPER,SERUM CERULOPLASMIN"}];
+
+public p11=new Healthpackage(11,'Liver function test(40)',this.pcDet11,400);
+
+public packageList:Array<Healthpackage>=[this.p,this.p2,this.p3,this.p4,this.p5,this.p6,this.p7,this.p8,this.p9,this.p10,this.p11];
+
+    getCentres() {
+    return [
+     new Centre(1, "Vijaya Health Care" ),
+     new Centre(2, "Maxcure" ),
+     
+    ];
+  }
+  getBranches(){
+    return [
+      new Branch(1,1,"Secunderabad"),
+      new Branch(2,1,"Jubilee Hills"),
+      new Branch(3,2,"Madhapur"),
+      new Branch(4,2,"Kukatpally"),
+      new Branch(5,2,"Gachibowli"),
+    ];
+  }
+}

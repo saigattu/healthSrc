@@ -1,0 +1,175 @@
+<router-outlet></router-outlet>
+<div class="container">
+  <div class="rowme">
+    <div class="col-md-8">
+      <ol class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><a [routerLink]="['/healthpackages']">Health Packages</a></li>
+        <li class="active">{{packDescr.packageName}}</li>
+      </ol>
+
+      <!--<div class="row" style="margin-bottom: 30px"> -->
+        <div class="panel panel-default">
+        <!--<div class="col-md-6">
+          <a href=""><img src="images/blog3.jpg" class="image"></a>
+        </div>-->
+        <div class="panel-heading text-center"  style="background-color:#f16528;color:#ffffff;">{{packDescr.packageName}}</div>
+        <!--<div class="col-md-6">-->
+        <div class="panel-body">
+          <!--<p class="blogtext">{{packDescr.packageName}}</p>-->
+          <!--<p>{{packDescr.packageDesc}}</p>-->
+         
+          <p >Tests conducted:-</p>
+         <!--<div class="table-responsive" style="margin-top: 60px;"> 
+  <table class="table table-striped">
+   
+    <tbody>
+      <tr *ngFor="let l of packDescr.packageDesc">
+        <td>{{l.pcName}}</td>
+        <td>{{l.pcValue}}</td>
+        
+      </tr>
+      
+    </tbody>
+  </table>
+         </div>-->
+          <div class="row" *ngFor="let l of packDescr.packageDesc" style=" border-top: 1px solid #000; padding-top: 5px;">
+            <div class="col-sm-4">{{l.pcName}}</div>
+            <div class="col-sm-8">{{l.pcValue}}</div>
+            
+          </div>
+          <!--<p *ngFor="let l of packDescr.packageDesc">{{l.pcName}} - {{l.pcValue}}</p>-->
+ </div>
+          <div class="panel-footer  text-center">
+               <!-- Trigger the modal with a button -->
+          <button type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false">Book Package</button>
+        </div>
+          <!-- Modal -->
+          <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">{{packDescr.packageName}}</h4>
+                </div>
+                <div class="modal-body">
+                  <form class="form-horizontal">
+                    <div class="form-group">
+                      <label class="control-label col-sm-3" for="usr" style=" color: black; font-size: 14px;">Name:</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="usr" placeholder="Enter Name" required>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-sm-3" for="gender" style=" color: black; font-size: 14px;">Gender:</label>
+                      <div class="col-sm-9">
+                        <label class="radio-inline"><input type="radio" name="optradio" required>Male</label>
+                        <label class="radio-inline"><input type="radio" name="optradio" required>Female</label>
+
+                      </div>
+
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-sm-3" for="age" style=" color: black; font-size: 14px;">Age:</label>
+                      <div class="col-sm-4">
+
+                        <input type="number" class="form-control" id="age" placeholder="Enter Age" required>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-sm-3" for="mob" style=" color: black; font-size: 14px;">Mobile Number:</label>
+                      <div class="col-sm-9">
+                        <input type="number" class="form-control" id="mob" placeholder="Enter Mobile Number" required>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-sm-3" for="email" style=" color: black; font-size: 14px;">Email:</label>
+                      <div class="col-sm-9">
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="control-label col-sm-3" for="gender" style=" color: black; font-size: 14px;">Package Center:</label>
+                      <div class="col-sm-9">
+                        <select class="form-control" (change)="onSelect($event.target.value)" id="sel1" name="sel1" required> <!-- use this attr if data should popluate automatically [(ngModel)]="selectedCentre.id" -->
+                        <option value="" selected="selected">--Select--</option>
+                        <option *ngFor="let centre of centres" value= {{centre.id}}>{{centre.name}}</option>
+                      </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-sm-3" for="gender" style=" color: black; font-size: 14px;">Package branch:</label>
+                      <div class="col-sm-9">
+                        <select class="form-control" id="sel2" required>
+                       <option *ngIf='selectedCentre.id == 0' value="">--Select--</option>
+                        <option *ngFor="let branch of branches " value= {{branch.id}}>{{branch.name}}</option>
+                      </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-sm-6 text-primary" for="gender">Package Amount: {{packDescr.packageCost}}</label>
+                      <label class="control-label col-sm-3 " for="gender">Total</label>
+                      <div class="col-sm-3">
+
+                        <select class="form-control" (change)="onSelected($event.target.value,packDescr)" id="sel3" name="sel3" required>
+                        <option value="" selected="selected">--Select--</option>
+                        <option  value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                      </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-sm-6 text-success" for="pwd" *ngIf="totalAmount != ''">Total Amount: {{totalAmount}}</label>
+
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-sm-3" for="comment" style=" color: black; font-size: 14px;">Comment:</label>
+                      <div class="col-sm-9">
+                        <textarea class="form-control" rows="5" id="comment"></textarea>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="col-sm-offset-6 col-sm-10">
+                        <button type="submit" class="btn btn-primary">Book an appointment</button>
+                      </div>
+                    </div>
+                  </form>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+ 
+          <!--<div class="btn btn-orange" (click)="addToCart(packDescr);" *ngIf="!packDescr.cart">Add to Cart</div>
+        <div class="btn btn-orange" (click)="addToCart(packDescr);" *ngIf="packDescr.cart">In Cart</div>-->
+       
+      </div>
+
+    </div>
+
+    <div class="col-md-3">
+
+      <div class="list-group" style=" word-break:break-all">
+        <a href="#" class="list-group-item active">
+   All Packages
+  </a>
+
+        <a class="list-group-item" *ngFor="let list of packser.packageList" (click)="showPackage(list);" style="cursor: pointer;"><i class="fa fa-plus-square orangem"> </i>{{list.packageName}} </a>
+      </div>
+
+
+    </div>
+  </div>
+
+</div>
+<br>
+<br>

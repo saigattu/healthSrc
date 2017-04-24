@@ -1,0 +1,165 @@
+<!--<div class="container">
+  <div class="rowme">
+    <div class="col-md-8">-->
+<!--<div class="container-blog" *ngFor="let list of packageList">
+        <p class="blogtext">{{list.packageName}}</p>
+        <p>{{list.packageDetails}}</p>
+        <div class="btn btn-orange">Book</div>
+      </div>-->
+<!--</div>
+  </div>
+</div>-->
+
+<div class="container">
+  <div class="rowme">
+    <div class="col-md-8">
+      <ol class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li class="active">Health Packages</li>
+      </ol>
+      <h3><span class="merabi">Welcome to</span> our <span class="meraba">Health Packages</span></h3>
+     <div class="row" *ngFor="let list of packageService.packageList" style="margin-bottom: 30px">
+       <div class="col-md-3">
+         <a href=""><img src="images/blog3.jpg" class="image"></a>
+       </div>
+       <div class="col-md-9" >
+           <p class="blogtext">{{list.packageName}}</p>
+       
+        <div class="btn btn-orange" (click)="btnClick(list);">Book</div>
+       </div>
+     </div>
+      <!--<div class="imgWrap">
+
+        <h3><span class="merabi">Welcome to</span> our <span class="meraba">Health Packages</span></h3>
+        <a href=""><img src="images/blog3.jpg" class="image"></a>
+
+        <p class="imgDescription visible-lg visible-md visible-sm hidden-sx">23
+          <BR>January
+
+        </p>
+
+      </div>
+      <div class="container-blog">
+        <table class="table table-hover">
+          <tr>
+            <td class="border"><img src="images/post.jpg" class="img-thumbnail"><span class="posttext">John Doe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-heart-o"> 3</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-comments-o"> 4</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-heartbeat hidden-xs"> Health Care</i></span></td>
+          </tr>
+        </table>
+        <p class="blogtext">This is the post with title</p>
+        <p>Quisque accumsan nisl eros, vel sagittis justo consequat in. Sed ut gravida enim, sed lobortis nibh. Etiam dapibus
+          felis in libero ultricies rutrum. Aliquam pellentesque justo ut quam pulvinar rhoncus. Sed gravida lobortis congue.
+          Praesent ultricies orci ut enim pellentesque aliquam. Proin viverra lorem nisi, eu mollis ipsum elementum nec.
+          Cras pretium purus nulla, vitae fermentum erat venenatis et.</p>
+        <div class="btn btn-orange">read more</div>
+      </div>
+      
+
+
+      <br><br><br>
+      <div class="imgWrap">
+
+
+        <a href=""><img src="images/blog2.jpg" class="image"></a>
+
+        <p class="imgDescription visible-lg visible-md visible-sm hidden-sx">15
+          <BR>February
+
+        </p>
+
+      </div>
+      <div class="container-blog">
+        <table class="table table-hover">
+          <tr>
+            <td class="border"><img src="images/post1.jpg" class="img-thumbnail"><span class="posttext">John Doe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-heart-o"> 3</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-comments-o"> 4</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-heartbeat hidden-xs"> Health Care</i></span></td>
+          </tr>
+        </table>
+        <p class="blogtext">This is the post with title</p>
+        <p>Quisque accumsan nisl eros, vel sagittis justo consequat in. Sed ut gravida enim, sed lobortis nibh. Etiam dapibus
+          felis in libero ultricies rutrum. Aliquam pellentesque justo ut quam pulvinar rhoncus. Sed gravida lobortis congue.
+          Praesent ultricies orci ut enim pellentesque aliquam. Proin viverra lorem nisi, eu mollis ipsum elementum nec.
+          Cras pretium purus nulla, vitae fermentum erat venenatis et.</p>
+        <div class="btn btn-orange">read more</div>
+      </div>
+      <br><br><br>
+      <!-- 16:9 aspect ratio 
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" width="850" height="471" src="https://www.youtube.com/embed/DJ7GxfpZ2Vg" frameborder="0"
+          allowfullscreen></iframe>
+
+      </div>
+
+
+      <div class="container-video">
+        <table class="table table-hover">
+          <tr>
+            <td class="border"><img src="images/post2.jpg" class="img-thumbnail"><span class="posttext">Vanda Smith Doe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-heart-o"> 3</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-comments-o"> 4</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-heartbeat hidden-xs"> Health Care</i></span></td>
+          </tr>
+        </table>
+        <p class="blogtext">This is a Video post with title</p>
+        <p>Quisque accumsan nisl eros, vel sagittis justo consequat in. Sed ut gravida enim, sed lobortis nibh. Etiam dapibus
+          felis in libero ultricies rutrum. Aliquam pellentesque justo ut quam pulvinar rhoncus. Sed gravida lobortis congue.
+          Praesent ultricies orci ut enim pellentesque aliquam. Proin viverra lorem nisi, eu mollis ipsum elementum nec.
+          Cras pretium purus nulla, vitae fermentum erat venenatis et.</p>
+        <div class="btn btn-orange">read more</div>
+
+
+      </div>-->
+      <div class="center">
+        <nav>
+          <ul class="pagination">
+            <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="input-group">
+        <span class="input-group-btn">
+        <button class="btn btn-orange" type="button">SEARCH <i class="fa fa-search"></i></button>
+      </span>
+        <input type="text" class="form-control" placeholder="Search for...">
+      </div>
+      <div class="list-group" style="word-break:break-all;">
+        <a  class="list-group-item active">
+    All Packages
+  </a>
+      
+        <a  class="list-group-item" *ngFor="let list of packageService.packageList" (click)="btnClick(list);" style="cursor: pointer" > <i class="fa fa-plus-square orangem"></i> {{list.packageName}}</a>
+      </div>
+
+      <!--<p class="titleblock">RECENT POST
+      </p>
+
+      <div class="post"><img src="images/post1.jpg">
+        <p><strong>Lorem ipsum dolor sitos perpendum gravitas</strong> <br>21 April 2015</p>
+      </div>
+
+      <div class="post"><img src="images/post.jpg">
+        <p><strong>Lorem ipsum dolor sitos perpendum gravitas</strong> <br>29 June 2015</p>
+      </div>
+
+      <div class="post"><img src="images/post2.jpg">
+        <p><strong>Lorem ipsum dolor sitos perpendum gravitas</strong> <br>02 August 2015</p>
+      </div>
+
+      <p class="titleblock">TAGS
+      </p>
+      <div class="post">
+        <div class="btn btn-default">Dental</div>
+        <div class="btn btn-default">Health</div>
+        <div class="btn btn-default">Foods</div>
+        <div class="btn btn-default">Cardiologist</div>
+        <div class="btn btn-default pr">Hemiopathy</div>
+        <div class="btn btn-default pr">Endocrinology</div>
+      </div>
+    </div>-->
+  </div>
+
+</div>
+<br>
+<br>

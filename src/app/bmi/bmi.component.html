@@ -1,0 +1,41 @@
+<div class="panel panel-primary" style="margin-top: 186px;">
+  <div class="panel-heading">BMI Calculator</div>
+  <div class="panel-body">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label class="control-label  col-sm-4">Weight : {{weight}}</label>
+        <div class="col-sm-6">
+          <input type="number" class="form-control dropdown " id="weight" min="0" [(ngModel)]="weight" name="weight" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-6">Height </label>
+
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-4">Feet: {{feet}}</label>
+        <div class="col-sm-4">
+          <input class="form-control dropdown" type="number" min="0" [(ngModel)]="feet" name="feet" required>
+        </div>
+
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-4">Inches: {{inches}}</label>
+
+        <div class="col-sm-4">
+          <input class="form-control dropdown" type="number" min="0" [(ngModel)]="inches" name="inches" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-8">Height in Inches: {{convertHeight(feet, inches)}}</label>
+      </div>
+    </form>
+  </div>
+  <div class="panel-footer">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label class="control-label col-sm-8">Your BMI is {{calcBMI(globalHeight,weight)}}</label>
+        <label class="control-label col-sm-8">You are {{categorize(globalHeight, weight)}}</label>
+      </div>
+    </form>
+  </div>

@@ -1,0 +1,16 @@
+.visible-lg {
+    font-size: 40px !important;
+    color: dodgerblue;
+}
+.mbr-overlay {
+  background-color: #000;
+  bottom: 0;
+  left: 0;
+  opacity: 0.5;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1; }
+  .mbr-overlay ~ * {
+    z-index: 2; }
+
